@@ -1,8 +1,8 @@
 app_name = "construction_management"
 app_title = "Construction Management"
-app_publisher = "TrueSoft"
-app_description = "Construction Management for ERPNext"
-app_email = "truesoft@example.com"
+app_publisher = "Amar Karthick P"
+app_description = "Construction Management"
+app_email = "amar@truesoft.ae"
 app_license = "mit"
 
 # Apps

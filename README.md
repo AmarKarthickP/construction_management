@@ -1,6 +1,6 @@
 ### Construction Management
 
-Construction Management for ERPNext
+Construction Management
 
 ### Installation
 
