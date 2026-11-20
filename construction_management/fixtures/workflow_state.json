@@ -1,0 +1,110 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": null,
+  "modified": "2026-11-19 17:57:15.072725",
+  "name": "Draft",
+  "style": "",
+  "workflow_state_name": "Draft"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": null,
+  "modified": "2026-11-19 17:57:15.076815",
+  "name": "Under Evaluation",
+  "style": "",
+  "workflow_state_name": "Under Evaluation"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": null,
+  "modified": "2026-11-19 17:57:15.078372",
+  "name": "Pending Bid Decision",
+  "style": "",
+  "workflow_state_name": "Pending Bid Decision"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": null,
+  "modified": "2026-11-19 17:57:15.082257",
+  "name": "Approved to Bid",
+  "style": "",
+  "workflow_state_name": "Approved to Bid"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": null,
+  "modified": "2026-11-19 17:57:15.084934",
+  "name": "No-Bid / Closed",
+  "style": "",
+  "workflow_state_name": "No-Bid / Closed"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": null,
+  "modified": "2026-11-19 17:57:15.088831",
+  "name": "Ready for Submission",
+  "style": "",
+  "workflow_state_name": "Ready for Submission"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": null,
+  "modified": "2026-11-19 17:57:15.090371",
+  "name": "Submitted",
+  "style": "",
+  "workflow_state_name": "Submitted"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": null,
+  "modified": "2026-11-19 17:57:15.092178",
+  "name": "Awaiting Result",
+  "style": "",
+  "workflow_state_name": "Awaiting Result"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": null,
+  "modified": "2026-11-19 17:57:15.094395",
+  "name": "Won",
+  "style": "",
+  "workflow_state_name": "Won"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": null,
+  "modified": "2026-11-19 17:57:15.095807",
+  "name": "Lost",
+  "style": "",
+  "workflow_state_name": "Lost"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": null,
+  "modified": "2026-11-19 17:57:15.097138",
+  "name": "Cancelled",
+  "style": "",
+  "workflow_state_name": "Cancelled"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": null,
+  "modified": "2026-11-19 17:57:15.098339",
+  "name": "Withdrawn / Closed",
+  "style": "",
+  "workflow_state_name": "Withdrawn / Closed"
+ }
+]

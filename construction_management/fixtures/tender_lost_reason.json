@@ -1,0 +1,83 @@
+[
+ {
+  "description": "Commercial price was above client budget",
+  "docstatus": 0,
+  "doctype": "Tender Lost Reason",
+  "is_active": 1,
+  "modified": "2026-11-19 17:57:14.789929",
+  "name": "Price Higher than Budget",
+  "reason_name": "Price Higher than Budget"
+ },
+ {
+  "description": "Competitor offered more aggressive commercial terms",
+  "docstatus": 0,
+  "doctype": "Tender Lost Reason",
+  "is_active": 1,
+  "modified": "2026-11-19 17:57:14.792913",
+  "name": "Competitor Commercial Advantage",
+  "reason_name": "Competitor Commercial Advantage"
+ },
+ {
+  "description": "Client cancelled or deferred project funding",
+  "docstatus": 0,
+  "doctype": "Tender Lost Reason",
+  "is_active": 1,
+  "modified": "2026-11-19 17:57:14.795141",
+  "name": "Client Budget Cancelled",
+  "reason_name": "Client Budget Cancelled"
+ },
+ {
+  "description": "Technical non-compliance or specification variance",
+  "docstatus": 0,
+  "doctype": "Tender Lost Reason",
+  "is_active": 1,
+  "modified": "2026-11-19 17:57:14.799157",
+  "name": "Technical / Specification Deviation",
+  "reason_name": "Technical / Specification Deviation"
+ },
+ {
+  "description": "Proposed construction schedule was unacceptable",
+  "docstatus": 0,
+  "doctype": "Tender Lost Reason",
+  "is_active": 1,
+  "modified": "2026-11-19 17:57:14.801115",
+  "name": "Delivery Schedule Not Acceptable",
+  "reason_name": "Delivery Schedule Not Acceptable"
+ },
+ {
+  "description": "Resource constraints precluded competitive bidding",
+  "docstatus": 0,
+  "doctype": "Tender Lost Reason",
+  "is_active": 1,
+  "modified": "2026-11-19 17:57:14.803800",
+  "name": "Insufficient Resources",
+  "reason_name": "Insufficient Resources"
+ },
+ {
+  "description": "Onerous contract conditions / liquidated damages",
+  "docstatus": 0,
+  "doctype": "Tender Lost Reason",
+  "is_active": 1,
+  "modified": "2026-11-19 17:57:14.805518",
+  "name": "Contract Terms Unacceptable",
+  "reason_name": "Contract Terms Unacceptable"
+ },
+ {
+  "description": "Client awarded to another contractor",
+  "docstatus": 0,
+  "doctype": "Tender Lost Reason",
+  "is_active": 1,
+  "modified": "2026-11-19 17:57:14.807063",
+  "name": "Client Selected Another Contractor",
+  "reason_name": "Client Selected Another Contractor"
+ },
+ {
+  "description": "Other commercial or strategic considerations",
+  "docstatus": 0,
+  "doctype": "Tender Lost Reason",
+  "is_active": 1,
+  "modified": "2026-11-19 17:57:14.808513",
+  "name": "Other",
+  "reason_name": "Other"
+ }
+]

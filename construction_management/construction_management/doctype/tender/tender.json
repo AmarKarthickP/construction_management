@@ -1,0 +1,693 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-11-19 19:30:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "tender_details_tab",
+  "basic_info_section",
+  "naming_series",
+  "tender_title",
+  "tender_reference",
+  "opportunity",
+  "col_break_basic_1",
+  "customer",
+  "lead",
+  "company",
+  "tender_owner",
+  "project_type",
+  "tender_type",
+  "workflow_state",
+  "tender_details_section",
+  "invitation_date",
+  "submission_deadline",
+  "tender_opening_date",
+  "site_visit_required",
+  "site_visit_date",
+  "col_break_det_1",
+  "project_location",
+  "currency",
+  "estimated_contract_value",
+  "expected_duration_months",
+  "scope_description",
+  "commercial_tech_tab",
+  "commercial_section",
+  "tender_fee_required",
+  "tender_fee",
+  "bid_bond_required",
+  "bid_bond_amount",
+  "bid_bond_submission_date",
+  "col_break_comm_1",
+  "performance_bond_required",
+  "advance_payment_percent",
+  "retention_percent",
+  "payment_terms",
+  "tech_req_section",
+  "boq_received",
+  "drawings_received",
+  "specifications_received",
+  "contract_conditions_received",
+  "col_break_tech_1",
+  "technical_feasibility",
+  "resource_availability",
+  "evaluation_notes",
+  "evaluation_tab",
+  "eval_summary_section",
+  "commercial_feasibility",
+  "strategic_importance",
+  "risk_assessment",
+  "recommended_decision",
+  "col_break_eval_1",
+  "evaluated_by",
+  "evaluation_date",
+  "urgent_exception_authorized",
+  "exception_reason",
+  "exception_authorized_by",
+  "exception_date",
+  "bid_decision_section",
+  "bid_decision",
+  "approved_by",
+  "approval_date",
+  "col_break_dec_1",
+  "decision_remarks",
+  "eval_matrix_section",
+  "evaluations",
+  "scope_docs_tab",
+  "prelim_scope_section",
+  "preliminary_scope_items",
+  "docs_section",
+  "documents",
+  "clarifications_section",
+  "clarifications",
+  "outcome_tab",
+  "outcome_section",
+  "award_date",
+  "awarded_contract_value",
+  "award_reference",
+  "col_break_out_1",
+  "lost_reason",
+  "lost_remarks",
+  "cancellation_reason",
+  "amendment_history_section",
+  "amendment_logs"
+ ],
+ "fields": [
+  {
+   "fieldname": "tender_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Tender Details"
+  },
+  {
+   "fieldname": "basic_info_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Information"
+  },
+  {
+   "default": "TND-.YYYY.-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Tender ID",
+   "options": "TND-.YYYY.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tender_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Tender Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tender_reference",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Tender Reference Number"
+  },
+  {
+   "fieldname": "opportunity",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Opportunity",
+   "options": "Opportunity",
+   "reqd": 1
+  },
+  {
+   "fieldname": "col_break_basic_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "lead",
+   "fieldtype": "Link",
+   "label": "Lead",
+   "options": "Lead",
+   "read_only": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "default": "__user",
+   "fieldname": "tender_owner",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Tender Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "project_type",
+   "fieldtype": "Select",
+   "label": "Project Type",
+   "options": "Building Construction\nCivil Works\nInfrastructure\nIndustrial Construction\nRenovation\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tender_type",
+   "fieldtype": "Select",
+   "label": "Tender Type",
+   "options": "Direct Client Invitation\nPublic Tender\nGovernment Tender\nPrivate Tender\nNegotiated Tender\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "workflow_state",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Tender Status",
+   "options": "Workflow State",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tender_details_section",
+   "fieldtype": "Section Break",
+   "label": "Tender Details"
+  },
+  {
+   "fieldname": "invitation_date",
+   "fieldtype": "Date",
+   "label": "Invitation Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "submission_deadline",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Submission Deadline",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tender_opening_date",
+   "fieldtype": "Date",
+   "label": "Tender Opening Date"
+  },
+  {
+   "default": "0",
+   "fieldname": "site_visit_required",
+   "fieldtype": "Check",
+   "label": "Site Visit Required"
+  },
+  {
+   "depends_on": "eval:doc.site_visit_required == 1",
+   "fieldname": "site_visit_date",
+   "fieldtype": "Date",
+   "label": "Site Visit Date"
+  },
+  {
+   "fieldname": "col_break_det_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "project_location",
+   "fieldtype": "Data",
+   "label": "Project Location"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "estimated_contract_value",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Estimated Contract Value",
+   "options": "currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "expected_duration_months",
+   "fieldtype": "Int",
+   "label": "Expected Duration (Months)"
+  },
+  {
+   "fieldname": "scope_description",
+   "fieldtype": "Text Editor",
+   "label": "Scope Description"
+  },
+  {
+   "fieldname": "commercial_tech_tab",
+   "fieldtype": "Tab Break",
+   "label": "Commercial & Technical"
+  },
+  {
+   "fieldname": "commercial_section",
+   "fieldtype": "Section Break",
+   "label": "Commercial Requirements"
+  },
+  {
+   "default": "0",
+   "fieldname": "tender_fee_required",
+   "fieldtype": "Check",
+   "label": "Tender Fee Required"
+  },
+  {
+   "depends_on": "eval:doc.tender_fee_required == 1",
+   "fieldname": "tender_fee",
+   "fieldtype": "Currency",
+   "label": "Tender Fee",
+   "options": "currency"
+  },
+  {
+   "default": "0",
+   "fieldname": "bid_bond_required",
+   "fieldtype": "Check",
+   "label": "Bid Bond Required"
+  },
+  {
+   "depends_on": "eval:doc.bid_bond_required == 1",
+   "fieldname": "bid_bond_amount",
+   "fieldtype": "Currency",
+   "label": "Bid Bond Amount",
+   "options": "currency"
+  },
+  {
+   "depends_on": "eval:doc.bid_bond_required == 1",
+   "fieldname": "bid_bond_submission_date",
+   "fieldtype": "Date",
+   "label": "Bid Bond Submission Date"
+  },
+  {
+   "fieldname": "col_break_comm_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "performance_bond_required",
+   "fieldtype": "Check",
+   "label": "Performance Bond Required"
+  },
+  {
+   "fieldname": "advance_payment_percent",
+   "fieldtype": "Percent",
+   "label": "Advance Payment Expected (%)"
+  },
+  {
+   "fieldname": "retention_percent",
+   "fieldtype": "Percent",
+   "label": "Retention Expected (%)"
+  },
+  {
+   "fieldname": "payment_terms",
+   "fieldtype": "Small Text",
+   "label": "Payment Terms"
+  },
+  {
+   "fieldname": "tech_req_section",
+   "fieldtype": "Section Break",
+   "label": "Technical Requirements"
+  },
+  {
+   "default": "0",
+   "fieldname": "boq_received",
+   "fieldtype": "Check",
+   "label": "BOQ Received"
+  },
+  {
+   "default": "0",
+   "fieldname": "drawings_received",
+   "fieldtype": "Check",
+   "label": "Drawings Received"
+  },
+  {
+   "default": "0",
+   "fieldname": "specifications_received",
+   "fieldtype": "Check",
+   "label": "Specifications Received"
+  },
+  {
+   "default": "0",
+   "fieldname": "contract_conditions_received",
+   "fieldtype": "Check",
+   "label": "Contract Conditions Received"
+  },
+  {
+   "fieldname": "col_break_tech_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "technical_feasibility",
+   "fieldtype": "Select",
+   "label": "Technical Feasibility",
+   "options": "Pending\nFeasible\nNot Feasible\nRequires Further Review"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "resource_availability",
+   "fieldtype": "Select",
+   "label": "Resource Availability",
+   "options": "Pending\nAvailable\nNot Available\nRequires Further Review"
+  },
+  {
+   "fieldname": "evaluation_notes",
+   "fieldtype": "Text Editor",
+   "label": "Evaluation Notes"
+  },
+  {
+   "fieldname": "evaluation_tab",
+   "fieldtype": "Tab Break",
+   "label": "Evaluation & Decision"
+  },
+  {
+   "fieldname": "eval_summary_section",
+   "fieldtype": "Section Break",
+   "label": "Evaluation Summary"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "commercial_feasibility",
+   "fieldtype": "Select",
+   "label": "Commercial Feasibility",
+   "options": "Pending\nFeasible\nNot Feasible\nRequires Further Review"
+  },
+  {
+   "fieldname": "strategic_importance",
+   "fieldtype": "Select",
+   "label": "Strategic Importance",
+   "options": "Low\nMedium\nHigh"
+  },
+  {
+   "fieldname": "risk_assessment",
+   "fieldtype": "Select",
+   "label": "Risk Assessment",
+   "options": "Low\nMedium\nHigh\nCritical"
+  },
+  {
+   "fieldname": "recommended_decision",
+   "fieldtype": "Select",
+   "label": "Recommended Decision",
+   "options": "Bid\nNo Bid\nFurther Review"
+  },
+  {
+   "fieldname": "col_break_eval_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "evaluated_by",
+   "fieldtype": "Link",
+   "label": "Evaluated By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "evaluation_date",
+   "fieldtype": "Datetime",
+   "label": "Evaluation Date",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "urgent_exception_authorized",
+   "fieldtype": "Check",
+   "label": "Urgent Exception Authorized",
+   "read_only": 1
+  },
+  {
+   "fieldname": "exception_reason",
+   "fieldtype": "Small Text",
+   "label": "Exception Reason",
+   "read_only": 1
+  },
+  {
+   "fieldname": "exception_authorized_by",
+   "fieldtype": "Link",
+   "label": "Exception Authorized By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "exception_date",
+   "fieldtype": "Datetime",
+   "label": "Exception Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "bid_decision_section",
+   "fieldtype": "Section Break",
+   "label": "Bid / No-Bid Decision"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "bid_decision",
+   "fieldtype": "Select",
+   "label": "Bid Decision",
+   "options": "Pending\nBid\nNo Bid",
+   "read_only": 1
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "approval_date",
+   "fieldtype": "Datetime",
+   "label": "Approval Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "col_break_dec_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "decision_remarks",
+   "fieldtype": "Text Editor",
+   "label": "Decision Remarks"
+  },
+  {
+   "fieldname": "eval_matrix_section",
+   "fieldtype": "Section Break",
+   "label": "Evaluation Matrix"
+  },
+  {
+   "fieldname": "evaluations",
+   "fieldtype": "Table",
+   "label": "Evaluations",
+   "options": "Tender Evaluation"
+  },
+  {
+   "fieldname": "scope_docs_tab",
+   "fieldtype": "Tab Break",
+   "label": "Scope & Documents"
+  },
+  {
+   "fieldname": "prelim_scope_section",
+   "fieldtype": "Section Break",
+   "label": "Preliminary Scope Snapshot"
+  },
+  {
+   "fieldname": "preliminary_scope_items",
+   "fieldtype": "Table",
+   "label": "Preliminary Scope Items",
+   "options": "Tender Preliminary Scope"
+  },
+  {
+   "fieldname": "docs_section",
+   "fieldtype": "Section Break",
+   "label": "Tender Documents"
+  },
+  {
+   "fieldname": "documents",
+   "fieldtype": "Table",
+   "label": "Documents",
+   "options": "Tender Document"
+  },
+  {
+   "fieldname": "clarifications_section",
+   "fieldtype": "Section Break",
+   "label": "Tender Clarifications"
+  },
+  {
+   "fieldname": "clarifications",
+   "fieldtype": "Table",
+   "label": "Clarifications",
+   "options": "Tender Clarification"
+  },
+  {
+   "fieldname": "outcome_tab",
+   "fieldtype": "Tab Break",
+   "label": "Outcome & History"
+  },
+  {
+   "fieldname": "outcome_section",
+   "fieldtype": "Section Break",
+   "label": "Tender Outcome"
+  },
+  {
+   "depends_on": "eval:doc.workflow_state == 'Won'",
+   "fieldname": "award_date",
+   "fieldtype": "Date",
+   "label": "Award Date",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.workflow_state == 'Won'",
+   "fieldname": "awarded_contract_value",
+   "fieldtype": "Currency",
+   "label": "Awarded Contract Value",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.workflow_state == 'Won'",
+   "fieldname": "award_reference",
+   "fieldtype": "Data",
+   "label": "Award Reference",
+   "read_only": 1
+  },
+  {
+   "fieldname": "col_break_out_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.workflow_state == 'Lost'",
+   "fieldname": "lost_reason",
+   "fieldtype": "Link",
+   "label": "Lost Reason",
+   "options": "Tender Lost Reason",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.workflow_state == 'Lost'",
+   "fieldname": "lost_remarks",
+   "fieldtype": "Small Text",
+   "label": "Lost Remarks",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:['Cancelled', 'Withdrawn / Closed'].includes(doc.workflow_state)",
+   "fieldname": "cancellation_reason",
+   "fieldtype": "Small Text",
+   "label": "Cancellation / Withdrawal Reason",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amendment_history_section",
+   "fieldtype": "Section Break",
+   "label": "Amendment & Return History"
+  },
+  {
+   "fieldname": "amendment_logs",
+   "fieldtype": "Table",
+   "label": "Amendment Logs",
+   "options": "Tender Amendment Log",
+   "read_only": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-11-19 19:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "Construction Management",
+ "name": "Tender",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Management Approver",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "QS / Estimation",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Projects Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User"
+  }
+ ],
+ "row_order": "asc",
+ "search_fields": "tender_title,tender_reference,opportunity,customer",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "tender_title",
+ "track_changes": 1,
+ "track_views": 1
+}

@@ -11,15 +11,15 @@ app_license = "mit"
 # required_apps = []
 
 # Each item in the list will be shown as an app in the apps page
-# add_to_apps_screen = [
-# 	{
-# 		"name": "construction_management",
-# 		"logo": "/assets/construction_management/logo.png",
-# 		"title": "Construction Management",
-# 		"route": "/construction_management",
-# 		"has_permission": "construction_management.api.permission.has_app_permission",
-# 	}
-# ]
+add_to_apps_screen = [
+	{
+		"name": "construction_management",
+		"logo": "/assets/construction_management/images/logo.jpg",
+		"title": "Construction",
+		"route": "/construction_management",
+		# "has_permission": "construction_management.api.permission.has_app_permission",
+	}
+]
 
 # The dock, the rail down the left of the desk, is a document rather than a hook. Author it in
 # Manage Dock on a developer-mode site and press Export to App, and it is written to
@@ -52,8 +52,14 @@ app_license = "mit"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
-# doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
+doctype_js = {
+	"Opportunity": "public/js/opportunity.js",
+	"Lead": "public/js/lead.js",
+	"Tender": "construction_management/doctype/tender/tender.js"
+}
+doctype_list_js = {
+	"Tender": "construction_management/doctype/tender/tender_list.js"
+}
 # doctype_kanban_js = {"doctype" : "public/js/doctype_kanban.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -97,6 +103,7 @@ app_license = "mit"
 
 # before_install = "construction_management.install.before_install"
 # after_install = "construction_management.install.after_install"
+after_migrate = "construction_management.setup_bd.setup_all"
 
 # Uninstallation
 # ------------
@@ -159,13 +166,15 @@ app_license = "mit"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+	"Opportunity": {
+		"validate": "construction_management.crm.opportunity.validate_lead_qualification"
+	},
+	"Tender": {
+		"on_update": "construction_management.crm.tender.on_tender_update",
+		"on_trash": "construction_management.crm.tender.on_tender_trash"
+	}
+}
 
 # Scheduled Tasks
 # ---------------
@@ -211,9 +220,9 @@ app_license = "mit"
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
 # along with any modifications made in other Frappe apps
-# override_doctype_dashboards = {
-# 	"Task": "construction_management.task.get_dashboard_data"
-# }
+override_doctype_dashboards = {
+	"Opportunity": "construction_management.crm.opportunity.get_dashboard_data"
+}
 
 # exempt linked doctypes from being automatically cancelled
 #
@@ -278,4 +287,43 @@ app_license = "mit"
 # ------------
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
+
+# Fixtures
+# --------
+fixtures = [
+	{
+		"dt": "Role",
+		"filters": [["name", "in", ["Management Approver", "QS / Estimation"]]]
+	},
+	{
+		"dt": "Custom Field",
+		"filters": [["dt", "in", ["Lead", "Opportunity"]]]
+	},
+	{
+		"dt": "Tender Lost Reason",
+		"filters": [["is_active", "=", 1]]
+	},
+	{
+		"dt": "Workflow State",
+		"filters": [["name", "in", [
+			"Draft", "Under Evaluation", "Pending Bid Decision", "Approved to Bid",
+			"No-Bid / Closed", "Ready for Submission", "Submitted", "Awaiting Result",
+			"Won", "Lost", "Cancelled", "Withdrawn / Closed"
+		]]]
+	},
+	{
+		"dt": "Workflow Action Master",
+		"filters": [["name", "in", [
+			"Submit for Evaluation", "Submit for Bid Decision", "Approve Bid",
+			"Decline Bid (No-Bid)", "Prepare Bid Package", "Return to Evaluation",
+			"Record Submission", "Bid Opened", "Record Won", "Record Lost",
+			"Cancel Tender", "Client Scrapped / Withdrawn"
+		]]]
+	},
+	{
+		"dt": "Workflow",
+		"filters": [["name", "=", "Tender Lifecycle Workflow"]]
+	}
+]
+
 

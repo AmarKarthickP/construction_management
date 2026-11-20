@@ -1,0 +1,86 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-11-19 17:57:15.113923",
+  "name": "Submit for Evaluation",
+  "workflow_action_name": "Submit for Evaluation"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-11-19 17:57:15.118148",
+  "name": "Submit for Bid Decision",
+  "workflow_action_name": "Submit for Bid Decision"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-11-19 17:57:15.119653",
+  "name": "Approve Bid",
+  "workflow_action_name": "Approve Bid"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-11-19 17:57:15.120930",
+  "name": "Decline Bid (No-Bid)",
+  "workflow_action_name": "Decline Bid (No-Bid)"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-11-19 17:57:15.122195",
+  "name": "Prepare Bid Package",
+  "workflow_action_name": "Prepare Bid Package"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-11-19 17:57:15.123554",
+  "name": "Return to Evaluation",
+  "workflow_action_name": "Return to Evaluation"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-11-19 17:57:15.124838",
+  "name": "Record Submission",
+  "workflow_action_name": "Record Submission"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-11-19 17:57:15.125923",
+  "name": "Bid Opened",
+  "workflow_action_name": "Bid Opened"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-11-19 17:57:15.127065",
+  "name": "Record Won",
+  "workflow_action_name": "Record Won"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-11-19 17:57:15.128356",
+  "name": "Record Lost",
+  "workflow_action_name": "Record Lost"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-11-19 17:57:15.129434",
+  "name": "Cancel Tender",
+  "workflow_action_name": "Cancel Tender"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-11-19 17:57:15.130697",
+  "name": "Client Scrapped / Withdrawn",
+  "workflow_action_name": "Client Scrapped / Withdrawn"
+ }
+]
